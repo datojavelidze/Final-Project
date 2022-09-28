@@ -1,105 +1,391 @@
 body {
-  width: $main-container;
+  max-width: $main-container;
   margin: 0 auto;
-    
-  .header {
-    @include flex-data(center, space-between, row);
-    padding: 10px 32px;
-    height: 80px;
-    background-color: whitesmoke;
-    position: static;
-    z-index:10;
+  font-family: $main-font;
+}
 
-        .navbar {
-          @include flex-data(center, center, row);
-          list-style: none;
-          gap: 50px;
+.header {
+  @include flex-data(center, space-between, row);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 10px 32px;
+  height: 80px;
+  background-color: whitesmoke;
+  z-index: 50;
+}
 
-          .navbarItem {
-            font-family: $main-font;
-            font-weight: 600;
-            cursor: pointer;
-            :hover {
-              color: #999;
-            }
-          }
-        }
+.navbar {
+  list-style: none;
+  @include flex-data(center, center, row);
+  gap: 50px;
+  @media screen and (max-width: 860px) {
+    gap: 10px;
+  }
+}
 
-      &>.contact {
-        @include flex-data(center, center, row);
-        gap: 10px;
+.navbarItem {
+  font-family: $main-font;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 1s ease-out;
 
-      &>.phoneiconwrapper {
-          @include flex-data(center, center, row);
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          border: 1px solid cyan;
-        }
-      } 
-      
-      .sidebar {
-        @include flex-data(center, start, column);
-        position:sticky;
-        left: 20px;
-        top: 70%;
-        width: 35px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        background-color: whitesmoke;
-        border: 1px solid black;
-        padding: 10px;
-        gap: 10px;
-
-        .sidebaritem {
-          border-bottom: 1px solid black;
-          cursor: pointer;
-        
-          &:last-child {
-            border-bottom: none;
-          }
-          .socialnet {
-            width: 20px;
-          }
-          
-        }
-      }
+  &:hover {
+    color: #999;
   }
 
-  
-  .section {
-    @include flex-data(flex-start, center, column);
-    background-image: url("../images/girl-resting-after-exercises-gym_152625-820_auto_x2_auto_x2.jpg");
-    width: 100%;
-    height: 916px;
-    color: #fff;
-    gap: 10px;
-    padding-left: 230px;
+  @media screen and (max-width: 860px) {
+    font-size: 14px;
+  }
+}
 
-    .subtitle {
+.phoneiconwrapper {
+  @include flex-data(center, center, row);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid cyan;
+}
+
+.contact {
+  @include flex-data(center, center, row);
+  gap: 10px;
+
+  @media screen and (max-width: 860px) {
+    display: none;
+  }
+}
+
+.sidebar {
+  @include flex-data(center, start, column);
+  position: fixed;
+  left: 0;
+  top: 70%;
+
+  width: 35px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  padding: 10px;
+  gap: 10px;
+}
+
+.sidebaritem {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.socialnet {
+  width: 20px;
+}
+
+.section {
+  @include flex-data(flex-start, center, column);
+  background-image: url("../images/girl-resting-after-exercises-gym_152625-820_auto_x2_auto_x2.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  color: #fff;
+  gap: 10px;
+  padding-left: 200px;
+
+  @media screen and (max-width: 860px) {
+    padding-left: 40px;
+    margin: 0 auto;
+  }
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #999;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.getstartedbutton {
+  width: 150px;
+  height: 45px;
+  border-radius: 8px;
+  background-color: $main-color;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+
+  transition: 1s ease-out;
+  &:hover {
+    background-color: $main-color;
+    opacity: 0.8;
+  }
+}
+
+.main {
+  width: 100%;
+  @include flex-data(center, center, row);
+  gap: 30px;
+  padding: 30px 0;
+
+  @media screen and (max-width: 860px) {
+    flex-wrap: wrap;
+  }
+
+  .mainItem {
+    @include flex-data(center, center, column);
+    background-image: url("../images/Group\ 135.jpg");
+    gap: 20px;
+    width: 476px;
+    height: 283px;
+
+    .mainItemTitle {
+      font-size: 22px;
+      color: #fff;
+    }
+
+    .mainItemSubtitle {
       font-size: 18px;
-      font-weight: 400;
       color: #999;
     }
-    .title {
-      font-size: 42px;
-      font-weight: 400;
-      line-height: 1.2;
+
+    .mainItemButton {
+      width: 100px;
+      height: 35px;
+      border: none;
+      border-radius: 2px;
+      background-color: #ff6c2c;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .buttonPink {
+      background-color: #945b9f;
+    }
+
+    .buttonBlue {
+      background-color: $main-color;
+    }
+  }
+}
+
+.aboutSection {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @include flex-data(center, center, row);
+  gap: 30px;
+
+  .aboutDesc {
+    max-height: 560px;
+    overflow: hidden;
+    width: 470px;
+    padding-left: 30px;
+    @include flex-data(flex-start, flex-start, column);
+
+    .littleAboutUs {
+      font-size: 15px;
+      font-weight: 500;
+      color: #ff6c2c;
+      margin-bottom: -2px;
+      text-align: left;
+    }
+
+    .aboutTitle {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      text-align: left;
+      max-height: 40px;
+      white-space: nowrap;
+    }
+
+    .line {
+      width: 100px;
+      background-color: #5eb6e1;
+      height: 1px;
+      margin-bottom: 50px;
+    }
+
+    .aboutSubtitle {
+      width: 80%;
+      font-size: 22px;
+      font-weight: 500;
+      color: #ff6c2c;
+      margin-bottom: 50px;
+      text-align: justify;
+      max-height: 70px;
+      overflow: hidden;
+    }
+
+    .aboutFullDesc {
+      width: 80%;
+      max-height: 230px;
+      overflow: hidden;
+      color: #999;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 50px;
+      text-align: justify;
+      line-height: 1.5;
+    }
+  }
+
+  .aboutImages {
+    @include flex-data(center, center, row);
+    gap: 30px;
+    .aboutColumnImages {
+      @include flex-data(center, center, column);
+      gap: 30px;
+    }
+  }
+}
+
+.classesWrapper {
+  width: 100%;
+  background-color: #222224;
+  .classesHeader {
+    width: 100%;
+    @include flex-data(center, center, column);
+    padding: 50px 30px;
+
+    .line {
+      width: 100px;
+      background-color: #5eb6e1;
+      height: 1px;
+      margin-bottom: 50px;
+    }
+
+    .classesTitle {
+      font-size: 32px;
+      color: #fff;
+      font-weight: 700;
       margin-bottom: 20px;
     }
-    .getstartedbutton {
-      width: 150px;
-      height: 45px;
-      border-radius: 8px;
-      background-color: $main-color;
-      font-weight: 700;
-      cursor: pointer;
-    
-      &:hover {
-        background-color: $main-color;
-        opacity: 0.8;
+
+    .classesDesc {
+      max-width: 960px;
+      font-size: 20px;
+      color: #999;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}
+
+.classesContent {
+  width: 100%;
+  @include flex-data(center, center, row);
+  flex-wrap: wrap;
+
+  .classesSingleItem-one {
+    background-image: url("../images/fit-young-woman-lifting-barbells-looking-focused-working-out-gym_155003-5353.jpg");
+  }
+  .classesSingleItem-two {
+    background-image: url("../images/woman-doing-exercise-gym_116124-203.jpg");
+  }
+
+  .classesSingleItem-three {
+    background-image: url("../images/fitness-days-gorgeous-blonde-woman-gym-her-weekend-time_146671-17084.jpg");
+  }
+
+  .classesSingleItem-four {
+    background-image: url("../images/woman-exercising-with-dumbbell-muscle-gym_116317-294.jpg");
+  }
+
+  .classesSingleItem-five {
+    background-image: url("../images/senior-woman-doing-abs-yoga-mat_23-2148282954.jpg");
+  }
+
+  .classesSingleItem-six {
+    background-image: url("../images/keep-holding-gorgeous-blonde-woman-gym-her-weekend-time_146671-16987.jpg");
+  }
+
+  .classesSingleItem {
+    max-width: 630px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    @include flex-data(center, center, row);
+
+    &:hover {
+      .hoverContainer {
+        @include flex-data(center, center, column);
+      }
+      .singleItemFooter {
+        display: none;
+      }
+    }
+
+    .hoverContainer {
+      width: 80%;
+      height: 80%;
+
+      display: none;
+      padding: 20px;
+      background-color: rgba(65, 105, 225, 0.8);
+      border-radius: 10px;
+
+      .classItemHoverTitle {
+        font-size: 22px;
+        color: #fff;
+        margin-bottom: 50px;
+      }
+
+      .classItemHoverDesc {
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 50px;
+        margin-top: -20px;
+      }
+
+      .classItemHoverButton {
+        width: 100px;
+        height: 42px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: #999;
+        }
+      }
+    }
+
+    .singleItemFooter {
+      width: 100%;
+      height: 100px;
+
+      position: absolute;
+      bottom: 0;
+
+      @include flex-data(center, center, row);
+
+      background-color: rgba(0, 0, 0, 0.8);
+
+      .singleItemFooterTitle {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 600;
       }
     }
   }
- 
-}  
+
+  .contentSectionOne {
+    width: 100%;
+    overflow: hidden;
+    @include flex-data(center, center, row);
+  }
+
+  .contentSectionTwo {
+    width: 100%;
+    overflow: hidden;
+    @include flex-data(center, center, row);
+  }
+}

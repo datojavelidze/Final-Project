@@ -142,8 +142,9 @@ a {
   src: url(/fonts/futura\ medium\ bt.ttf);
 }
 body {
-  width: 1920px;
+  max-width: 1920px;
   margin: 0 auto;
+  font-family: futur;
 }
 
 .header {
@@ -168,14 +169,25 @@ body {
   flex-direction: row;
   gap: 50px;
 }
+@media screen and (max-width: 860px) {
+  .navbar {
+    gap: 10px;
+  }
+}
 
 .navbarItem {
   font-family: futur;
   font-weight: 600;
   cursor: pointer;
+  transition: 1s ease-out;
 }
 .navbarItem:hover {
   color: #999;
+}
+@media screen and (max-width: 860px) {
+  .navbarItem {
+    font-size: 14px;
+  }
 }
 
 .phoneiconwrapper {
@@ -195,6 +207,11 @@ body {
   justify-content: center;
   flex-direction: row;
   gap: 10px;
+}
+@media screen and (max-width: 860px) {
+  .contact {
+    display: none;
+  }
 }
 
 .sidebar {
@@ -232,11 +249,18 @@ body {
   justify-content: center;
   flex-direction: column;
   background-image: url("../images/girl-resting-after-exercises-gym_152625-820_auto_x2_auto_x2.jpg");
+  background-size: cover;
   width: 100%;
   height: 800px;
   color: #fff;
   gap: 10px;
   padding-left: 200px;
+}
+@media screen and (max-width: 860px) {
+  .section {
+    padding-left: 40px;
+    margin: 0 auto;
+  }
 }
 
 .subtitle {
@@ -259,8 +283,274 @@ body {
   background-color: #5eb6e1;
   font-weight: 700;
   cursor: pointer;
+  border: none;
+  transition: 1s ease-out;
 }
 .getstartedbutton:hover {
   background-color: #5eb6e1;
   opacity: 0.8;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+  padding: 30px 0;
+}
+@media screen and (max-width: 860px) {
+  .main {
+    flex-wrap: wrap;
+  }
+}
+.main .mainItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../images/Group 135.jpg");
+  gap: 20px;
+  width: 476px;
+  height: 283px;
+}
+.main .mainItem .mainItemTitle {
+  font-size: 22px;
+  color: #fff;
+}
+.main .mainItem .mainItemSubtitle {
+  font-size: 18px;
+  color: #999;
+}
+.main .mainItem .mainItemButton {
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 2px;
+  background-color: #ff6c2c;
+  color: #fff;
+  font-weight: 600;
+}
+.main .mainItem .buttonPink {
+  background-color: #945b9f;
+}
+.main .mainItem .buttonBlue {
+  background-color: #5eb6e1;
+}
+
+.aboutSection {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+}
+.aboutSection .aboutDesc {
+  max-height: 560px;
+  overflow: hidden;
+  width: 470px;
+  padding-left: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.aboutSection .aboutDesc .littleAboutUs {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ff6c2c;
+  margin-bottom: -2px;
+  text-align: left;
+}
+.aboutSection .aboutDesc .aboutTitle {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: left;
+  max-height: 40px;
+  white-space: nowrap;
+}
+.aboutSection .aboutDesc .line {
+  width: 100px;
+  background-color: #5eb6e1;
+  height: 1px;
+  margin-bottom: 50px;
+}
+.aboutSection .aboutDesc .aboutSubtitle {
+  width: 80%;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ff6c2c;
+  margin-bottom: 50px;
+  text-align: justify;
+  max-height: 70px;
+  overflow: hidden;
+}
+.aboutSection .aboutDesc .aboutFullDesc {
+  width: 80%;
+  max-height: 230px;
+  overflow: hidden;
+  color: #999;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  text-align: justify;
+  line-height: 1.5;
+}
+.aboutSection .aboutImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+}
+.aboutSection .aboutImages .aboutColumnImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.classesWrapper {
+  width: 100%;
+  background-color: #222224;
+}
+.classesWrapper .classesHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 30px;
+}
+.classesWrapper .classesHeader .line {
+  width: 100px;
+  background-color: #5eb6e1;
+  height: 1px;
+  margin-bottom: 50px;
+}
+.classesWrapper .classesHeader .classesTitle {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.classesWrapper .classesHeader .classesDesc {
+  max-width: 960px;
+  font-size: 20px;
+  color: #999;
+  font-weight: 500;
+  text-align: center;
+}
+
+.classesContent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.classesContent .classesSingleItem-one {
+  background-image: url("../images/fit-young-woman-lifting-barbells-looking-focused-working-out-gym_155003-5353.jpg");
+}
+.classesContent .classesSingleItem-two {
+  background-image: url("../images/woman-doing-exercise-gym_116124-203.jpg");
+}
+.classesContent .classesSingleItem-three {
+  background-image: url("../images/fitness-days-gorgeous-blonde-woman-gym-her-weekend-time_146671-17084.jpg");
+}
+.classesContent .classesSingleItem-four {
+  background-image: url("../images/woman-exercising-with-dumbbell-muscle-gym_116317-294.jpg");
+}
+.classesContent .classesSingleItem-five {
+  background-image: url("../images/senior-woman-doing-abs-yoga-mat_23-2148282954.jpg");
+}
+.classesContent .classesSingleItem-six {
+  background-image: url("../images/keep-holding-gorgeous-blonde-woman-gym-her-weekend-time_146671-16987.jpg");
+}
+.classesContent .classesSingleItem {
+  max-width: 630px;
+  width: 100%;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.classesContent .classesSingleItem:hover .hoverContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.classesContent .classesSingleItem:hover .singleItemFooter {
+  display: none;
+}
+.classesContent .classesSingleItem .hoverContainer {
+  width: 80%;
+  height: 80%;
+  display: none;
+  padding: 20px;
+  background-color: rgba(65, 105, 225, 0.8);
+  border-radius: 10px;
+}
+.classesContent .classesSingleItem .hoverContainer .classItemHoverTitle {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.classesContent .classesSingleItem .hoverContainer .classItemHoverDesc {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 50px;
+  margin-top: -20px;
+}
+.classesContent .classesSingleItem .hoverContainer .classItemHoverButton {
+  width: 100px;
+  height: 42px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.classesContent .classesSingleItem .hoverContainer .classItemHoverButton:hover {
+  background-color: #999;
+}
+.classesContent .classesSingleItem .singleItemFooter {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.classesContent .classesSingleItem .singleItemFooter .singleItemFooterTitle {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+}
+.classesContent .contentSectionOne {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.classesContent .contentSectionTwo {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }/*# sourceMappingURL=global.css.map */
