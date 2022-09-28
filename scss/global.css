@@ -1,0 +1,266 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: futur;
+  src: url(/fonts/futura\ medium\ bt.ttf);
+}
+body {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 10px 32px;
+  height: 80px;
+  background-color: whitesmoke;
+  z-index: 50;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.navbarItem {
+  font-family: futur;
+  font-weight: 600;
+  cursor: pointer;
+}
+.navbarItem:hover {
+  color: #999;
+}
+
+.phoneiconwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid cyan;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 70%;
+  width: 35px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  padding: 10px;
+  gap: 10px;
+}
+
+.sidebaritem {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+.sidebaritem:last-child {
+  border-bottom: none;
+}
+
+.socialnet {
+  width: 20px;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../images/girl-resting-after-exercises-gym_152625-820_auto_x2_auto_x2.jpg");
+  width: 100%;
+  height: 800px;
+  color: #fff;
+  gap: 10px;
+  padding-left: 200px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #999;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.getstartedbutton {
+  width: 150px;
+  height: 45px;
+  border-radius: 8px;
+  background-color: #5eb6e1;
+  font-weight: 700;
+  cursor: pointer;
+}
+.getstartedbutton:hover {
+  background-color: #5eb6e1;
+  opacity: 0.8;
+}/*# sourceMappingURL=global.css.map */
